@@ -1,0 +1,276 @@
+body {
+    font-family:"Lucida Handwrting" cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff
+}
+
+
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+nav {
+    position: relative;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #888; /* Set text color to white */
+    text-decoration: none;
+    font-size: 20px;
+    /*font-weight: bold;  Make text bold */
+    transition: text-shadow 0.3s; /* Smooth transition for text-shadow */
+}
+
+
+/* Neon effect on hover */
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #00c4ff, 0 0 35px #00c4ff, 0 0 45px #00c4ff, 0 0 60px #00c4ff, 0 0 80px #00c4ff; /* Neon text-shadow effect */
+}
+
+/*.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative; Add position relative 
+}*/
+
+.menu-button {
+    position: absolute; /* Position the button absolutely */
+    left: 50%; /* Move the button to the center horizontally */
+    transform: translateX(-50%); /* Adjust to center the button */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 10px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu.show {
+    display: flex; /* Change display to flex */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "lucida Handwriting", cursive, sans-serif;
+} 
+
+p {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    margin-bottom: 20px; /* Add margin if needed */
+}
+
+.logo img {
+    max-width: 30%; /* Ensure the logo doesn't exceed its container's width */
+}
+
+/* gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery img:hover ~ .overlay {
+    opacity: 1;
+}
+
+/* Add to styles.css */
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+#testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.service p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#about p {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu {
+        display: none; /* Hide the menu items */
+    }
+
+    .menu-button {
+        display: block; /* Show the menu button */
+        text-align: center; /* Center the button text */
+    }
+
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .testimonial {
+        padding: 15px;
+    }
+
+}
+
+
