@@ -1,0 +1,2 @@
+# spiritual-website
+spiritualjourneywithpatricia
