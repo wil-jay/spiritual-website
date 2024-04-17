@@ -13,12 +13,31 @@ window.addEventListener("scroll", function() {
     lastScrollTop = currentScroll;
 });
 
-// Get the menu button and the dropdown menu
 const menuButton = document.getElementById('menuButton');
 const dropdownMenu = document.getElementById('dropdownMenu');
 
-// Add event listener to the menu button
-menuButton.addEventListener('click', function() {
-    // Toggle the 'show' class on the dropdown menu
+menuButton.addEventListener('click', () => {
     dropdownMenu.classList.toggle('show');
 });
+
+$(document).ready(function() {
+    $('.gallery img').hover(function() {
+        $(this).next('.overlay').css('opacity', 1);
+    }, function() {
+        $(this).next('.overlay').css('opacity', 0);
+    });
+});
+
+$(document).ready(function() {
+    // Hide the dropdown menu by default
+    $('.dropdown-menu').hide();
+
+    // Toggle the dropdown menu when clicking the menu button
+    $('#menuButton').click(function() {
+        $('.dropdown-menu').toggle();
+        // Toggle a class to change the appearance of the menu icon
+        $(this).find('i').toggleClass('fa-bars fa-times');
+    });
+});
+
+
